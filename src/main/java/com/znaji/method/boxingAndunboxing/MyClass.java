@@ -1,5 +1,7 @@
 package com.znaji.method.boxingAndunboxing;
 
+import java.util.List;
+
 public class MyClass {
     public static void main(String[] args) {
         int a = 10;
@@ -19,5 +21,15 @@ public class MyClass {
         Long l = 10L;
         //->boxing manually and compiler cast:
         Long ll = Long.valueOf(10);
+
+        Character test = null;
+        char secondTest = test; // will cause NullPointerException
+
+        int [] ints = {1,2,3};
+
+        fly(ints);
+    }
+
+    private static void fly(int ... ints) {
     }
 }
