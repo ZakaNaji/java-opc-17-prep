@@ -8,13 +8,11 @@ import java.io.IOException;
 abstract class Test {
     private int num;
     static StringBuilder sb = new StringBuilder();
-     void test() throws IOException{}
+     static void test() throws IOException{}
 }
 
 class SubTest extends Test {
     private int num;
-
-    public void test() throws FileNotFoundException{}
     static {
         sb.append("a");
     }
@@ -22,10 +20,8 @@ class SubTest extends Test {
     static void test(short s) {
         System.out.println(s);
     }
-    public static void main(String[] args) {
-        fly(1);
-        Double s = 1000000000000.0;
-        fly(2);
+    public static void main(String[] args) throws IOException {
+        test();
     }
 
     static void fly(long l) {
