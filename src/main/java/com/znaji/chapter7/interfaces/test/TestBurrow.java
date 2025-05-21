@@ -1,7 +1,7 @@
-package com.znaji.chapter7.test;
+package com.znaji.chapter7.interfaces.test;
 
-import com.znaji.chapter7.AnotherInterface;
-import com.znaji.chapter7.CanBurrow;
+import com.znaji.chapter7.interfaces.AnotherInterface;
+import com.znaji.chapter7.interfaces.CanBurrow;
 
 public class TestBurrow implements CanBurrow, AnotherInterface {
     @Override

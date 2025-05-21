@@ -1,4 +1,4 @@
-package com.znaji.chapter7;
+package com.znaji.chapter7.interfaces;
 
 public interface CanBurrow {
     Float getSpeed(int age);
