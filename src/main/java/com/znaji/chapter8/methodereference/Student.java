@@ -10,11 +10,9 @@ public class Student {
         Converter converter1 = d -> Math.round(d);//same but more verbose
 
         //instance method ref:
-        var text = "Hello";
-        StringCheck stringCheck = text::startsWith;
-        StringCheck stringCheck1 = s -> text.startsWith(s);
-        System.out.println(stringCheck.checkStarts("H"));
-        System.out.println(stringCheck1.checkStarts("h"));
+        var text = "";
+        StringCheck stringCheck = text::isEmpty;
+        System.out.println(stringCheck.check());
 
     }
 
@@ -28,5 +26,5 @@ interface Converter {
 }
 
 interface StringCheck{
-    boolean checkStarts(String prefix);
+    boolean check();
 }
