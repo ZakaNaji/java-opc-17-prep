@@ -14,6 +14,16 @@ public class Student {
         StringCheck stringCheck = text::isEmpty;
         System.out.println(stringCheck.check());
 
+        //instance method ref called on params:
+        EmptyCheck emptyCheck = String::isEmpty;
+        System.out.println(emptyCheck.check(""));
+
+        MultiParamCheck multiParamCheck = String::startsWith;
+        MultiParamCheck multiParamCheck1 = (s1, s2) -> s1.startsWith(s2);
+        System.out.println(multiParamCheck.check("Zoo", "Z"));
+
+        StringCreator creator = String::new;
+        System.out.println(creator.create("Hello"));
     }
 
     public static void learnToSpeakAWord(String word, Learn learn) {
@@ -27,4 +37,16 @@ interface Converter {
 
 interface StringCheck{
     boolean check();
+}
+
+interface EmptyCheck {
+    boolean check(String s);
+}
+
+interface MultiParamCheck {
+    boolean check(String s1, String s2);
+}
+
+interface StringCreator {
+    String create(String init);
 }
