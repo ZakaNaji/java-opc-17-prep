@@ -2,6 +2,7 @@ package com.znaji.chapter8.builtin.functions;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 public class FuntionTest {
     public static void main(String[] args) {
@@ -10,5 +11,8 @@ public class FuntionTest {
 
         BiFunction<String, String, String> f2 = String::concat;
         System.out.println(f2.apply("Hi ", "World"));
+
+        UnaryOperator<String> u = String::toUpperCase;
+        System.out.println(u.apply("test"));
     }
 }
