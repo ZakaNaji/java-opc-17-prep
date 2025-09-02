@@ -16,5 +16,9 @@ public class ConsumerTest {
         m1.accept("Orange", 12);
         m1.accept("Apple", 15);
         System.out.println(map);
+        /// //////////
+        Consumer<String> c1 = s -> System.out.println("1: " + s);
+        Consumer<String> c2 = s -> System.out.println("2: " + s);
+        c1.andThen(c2).accept("ZN");
     }
 }
