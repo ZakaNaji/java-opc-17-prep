@@ -11,5 +11,14 @@ public class PredicateTest {
 
         BiPredicate<String, String> p2 = String::equalsIgnoreCase;
         System.out.println(p2.test("test", "TEST"));
+
+        var txt = "brown egg";
+        Predicate<String> egg = s -> s.contains("egg");
+        Predicate<String> brown = s -> s.contains("brown");
+        Predicate<String> brownEgg = egg.and(brown);
+        Predicate<String> otherEgg = egg.and(brown.negate());
+        System.out.println(brownEgg.test(txt));
+        System.out.println(otherEgg.test(txt));
+
     }
 }
