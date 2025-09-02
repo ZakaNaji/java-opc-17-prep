@@ -1,6 +1,7 @@
 package com.znaji.chapter8.builtin.functions;
 
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
@@ -14,5 +15,8 @@ public class FuntionTest {
 
         UnaryOperator<String> u = String::toUpperCase;
         System.out.println(u.apply("test"));
+
+        BinaryOperator<String> b = String::concat;
+        System.out.println(b.apply("Hi ", "people"));
     }
 }
