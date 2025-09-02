@@ -18,5 +18,10 @@ public class FuntionTest {
 
         BinaryOperator<String> b = String::concat;
         System.out.println(b.apply("Hi ", "people"));
+
+        UnaryOperator<Integer> before = i -> i + 1;
+        UnaryOperator<Integer> after = i -> i * 2;
+        System.out.println(after.compose(before).apply(1));
+        System.out.println(before.andThen(after).apply(1));
     }
 }
